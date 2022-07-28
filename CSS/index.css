@@ -26,6 +26,9 @@
   --header-content-color: #FFFFFF;
   --nav-link-color: #33383F;
   --main-title-color: #1F1F1F;
+  --section-first-box-bg-color: #FAEA73;
+  --section-second-box-bg-color: #CCEFF6;
+  --section-third-box-bg-color: #F7CEDC;
 }
 
 .container {
@@ -38,6 +41,19 @@
 /* /========================================== BASIC TO THE CODES END ================================== \ */
 
 /* /========================================== HEADER TO THE CODES START =============================== \ */
+.header {
+  transition: all .3s linear;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: var(--header-content-color);
+}
+
+.header.active {
+  transition: all .3s linear;
+  box-shadow: 1px 1px 3px var(--main-title-color);
+}
+
 .header__content {
   height: 43px;
   display: flex;
@@ -131,15 +147,15 @@
 
 /* /========================================== MAIN TO THE CODES START =============================== \ */
 
-.main__container{
+.main__container {
   display: grid;
-  grid-template-columns: repeat(2,auto);
+  grid-template-columns: repeat(2, auto);
   justify-content: space-between;
   align-items: center;
   height: 500px;
 }
 
-.main__box_title{
+.main__box_title {
   font-family: 'Fraunces';
   font-style: normal;
   font-weight: 600;
@@ -152,7 +168,7 @@
   width: 100%;
 }
 
-.main__box_paragraph{
+.main__box_paragraph {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
@@ -166,7 +182,7 @@
   margin: 24px 0 29px 0;
 }
 
-.main__box_btn{
+.main__box_btn {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
@@ -182,7 +198,7 @@
   margin: 0 12px 0 0;
 }
 
-.main__box__links{
+.main__box__links {
   display: flex;
   align-items: center;
 }
@@ -192,7 +208,7 @@
   color: var(--header-content-bg-color);
 }
 
-.main__box_link{
+.main__box_link {
   display: flex;
   align-items: center;
   font-family: 'Inter';
@@ -207,7 +223,97 @@
 
 }
 
-.main__box_link_img{
+.main__box_link_img {
   margin: 0 0 0 7px;
 }
+
 /* /========================================== MAIN TO THE CODES END ================================= \ */
+
+/* /========================================== SECTION TO THE CODES START ============================ \ */
+
+.section__content{
+  margin: 131px 0 167px 0;
+}
+
+.section__content_paragraph{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 38px;
+  color: var(--main-title-color);
+  text-align: center;
+  letter-spacing: 0.2px;
+  margin: 0 0 31px 0;
+}
+
+.section__content_icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.section__container{
+  display: grid;
+  grid-template-columns: repeat(3,auto);
+  gap: 30px;
+}
+
+.section__box{
+  height: 250px;
+  width: 355px;
+  border-radius: 0px;
+  padding: 32px;
+}
+
+.section__box.first {
+  background-color: var(--section-first-box-bg-color);
+  border: 2px solid var(--section-first-box-bg-color);
+  transition: all .3s linear;
+}
+
+.section__box.first:hover {
+  background-color: var(--header-content-color);
+}
+.section__box.second:hover {
+  background-color: var(--header-content-color);
+}
+.section__box.third:hover {
+  background-color: var(--header-content-color);
+}
+
+.section__box.second {
+  background-color: var(--section-second-box-bg-color);
+  border: 2px solid var(--section-second-box-bg-color);
+  transition: all .3s linear;
+}
+.section__box.third {
+  background-color: var(--section-third-box-bg-color);
+  border: 2px solid var(--section-third-box-bg-color);
+  transition: all .3s linear;
+}
+
+.section__box_title{
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 31px;
+  color: var(--main-title-color);
+  letter-spacing: 0.2px;
+  margin: 12px 0 13px 0;
+}
+
+.section__box_paragraph{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--main-title-color);
+  letter-spacing: 0.2px;
+  max-width: 287px;
+  width: 100%;
+}
+/* /========================================== SECTION TO THE CODES END ============================== \ */
