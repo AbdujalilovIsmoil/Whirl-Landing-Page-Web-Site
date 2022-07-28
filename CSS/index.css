@@ -1,4 +1,15 @@
 /* /========================================== BASIC TO THE CODES START ================================= \ */
+
+@font-face {
+  font-family: 'Inter';
+  src: url("../FONT/INTER/static/Inter-Light.ttf");
+}
+
+@font-face {
+  font-family: 'Fraunces';
+  src: url("../FONT/FRAUNCES/static/Fraunces/Fraunces-Light.ttf");
+}
+
 *,
 *::after,
 *::before {
@@ -11,7 +22,10 @@
 }
 
 :root {
-
+  --header-content-bg-color: #0070A0;
+  --header-content-color: #FFFFFF;
+  --nav-link-color: #33383F;
+  --main-title-color: #1F1F1F;
 }
 
 .container {
@@ -20,4 +34,180 @@
   max-width: 1440px;
   width: 100%;
 }
+
 /* /========================================== BASIC TO THE CODES END ================================== \ */
+
+/* /========================================== HEADER TO THE CODES START =============================== \ */
+.header__content {
+  height: 43px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--header-content-bg-color);
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: var(--header-content-color);
+}
+
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  width: 100%;
+}
+
+.nav__intro .nav__intro_img {
+  margin: 0 26px 0 0;
+}
+
+.nav__box {
+  display: flex;
+  align-items: center;
+  height: 75px;
+}
+
+.nav .nav__list .nav__item {
+  display: inline-block;
+}
+
+.nav .nav__list .nav__item .nav__link {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: var(--nav-link-color);
+  padding: 0 12px;
+}
+
+.nav__form {
+  height: 75px;
+  display: flex;
+  align-items: center;
+}
+
+.nav__form .nav__form_link {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: var(--header-content-bg-color);
+  margin: 0 15px 0 0;
+}
+
+.nav__form_btn {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--header-content-color);
+  border-radius: 0px;
+  background-color: var(--header-content-bg-color);
+  letter-spacing: 0.2px;
+  padding: 7.5px 22.5px;
+  margin: 0 0 0 15px;
+  transition: all .3s linear;
+  border: 1px solid var(--header-content-bg-color);
+}
+
+.nav__form_btn:hover {
+  background-color: var(--header-content-color);
+  color: var(--header-content-bg-color);
+}
+
+/* /========================================== HEADER TO THE CODES END ================================= \ */
+
+/* /========================================== MAIN TO THE CODES START =============================== \ */
+
+.main__container{
+  display: grid;
+  grid-template-columns: repeat(2,auto);
+  justify-content: space-between;
+  align-items: center;
+  height: 500px;
+}
+
+.main__box_title{
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 58px;
+  line-height: 64px;
+  letter-spacing: 0.2px;
+  color: var(--main-title-color);
+  height: 128px;
+  max-width: 485px;
+  width: 100%;
+}
+
+.main__box_paragraph{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--main-title-color);
+  letter-spacing: 0.2px;
+  height: 90px;
+  max-width: 351px;
+  width: 100%;
+  margin: 24px 0 29px 0;
+}
+
+.main__box_btn{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--header-content-color);
+  border-radius: 0px;
+  background-color: var(--header-content-bg-color);
+  letter-spacing: 0.2px;
+  padding: 7.5px 22.5px;
+  transition: all .3s linear;
+  border: 1px solid var(--header-content-bg-color);
+  margin: 0 12px 0 0;
+}
+
+.main__box__links{
+  display: flex;
+  align-items: center;
+}
+
+.main__box_btn:hover {
+  background-color: var(--header-content-color);
+  color: var(--header-content-bg-color);
+}
+
+.main__box_link{
+  display: flex;
+  align-items: center;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 27px;
+  color: var(--header-content-bg-color);
+  text-align: center;
+  letter-spacing: 0.2px;
+  margin: 0 0 0 12px;
+
+}
+
+.main__box_link_img{
+  margin: 0 0 0 7px;
+}
+/* /========================================== MAIN TO THE CODES END ================================= \ */
