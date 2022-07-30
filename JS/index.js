@@ -9,6 +9,7 @@ window.addEventListener("load",()=>{
   let accordionParagraph = document.querySelectorAll(".section__accordion_small_box_paragraph");
   for(let i = 0; i < accordionIcons.length; i++){
     accordionIcons[i].addEventListener("click",()=>{
+    accordionIcons[i].classList.toggle("active");
     accordionParagraph[i].classList.toggle("active");
     });
   }
