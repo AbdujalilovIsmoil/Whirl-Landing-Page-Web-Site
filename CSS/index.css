@@ -338,10 +338,16 @@ body {
   width: 100%;
   min-height: 694px;
   background-color: var(--section-accordion-bg-color);
-  padding: 79px 0 0 0;
+  padding: 79px 0 79px 0;
   position: relative;
 }
 
+.section__accordion_container {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
+  gap: 170px;
+}
 
 .section__accordion_title {
   max-width: 629px;
