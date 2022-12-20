@@ -3,52 +3,39 @@
 window.addEventListener("load", () => {
   // Scroll Animation
   window.addEventListener("scroll", () => {
-    let header = document.querySelector(".header");
-    header.classList.toggle("active", window.scrollY > 0);
+    $(".header").classList.toggle("active", window.scrollY > 0);
   });
 
   // Accordions
-  let accordionIcons = document.querySelectorAll(
-    ".section__accordion_small_box_content_strelka"
-  );
-  let accordionParagraph = document.querySelectorAll(
-    ".section__accordion_small_box_paragraph"
-  );
-  for (let i = 0; i < accordionIcons.length; i++) {
-    accordionIcons[i].addEventListener("click", () => {
-      accordionIcons[i].classList.toggle("active");
-      accordionParagraph[i].classList.toggle("active");
+  for (let i = 0; i < $$(".section__accordion_small_box_content_strelka").length; i++) {
+    $$(".section__accordion_small_box_content_strelka")[i].addEventListener("click", () => {
+      $$(".section__accordion_small_box_content_strelka")[i].classList.toggle("active");
+      $$(".section__accordion_small_box_paragraph")[i].classList.toggle("active");
     });
   }
 
   // Navbar
-  let fabars = document.querySelector(".fa-bars");
-  let faTimes = document.querySelector(".fa-times");
-  let navbar = document.querySelector(".secret");
-  let links = navbar.querySelectorAll(".secret__link");
-  let secretForm = document.querySelector(".secret__form");
-  let secretForms = secretForm.querySelectorAll(".secret_forms");
-  faTimes.addEventListener("click", closeNavbar);
+  $(".fa-times").addEventListener("click", closeNavbar);
 
   function closeNavbar() {
-    if (!navbar.classList.add("active")) {
-      navbar.classList.remove("active");
+    if (!$(".secret").classList.add("active")) {
+      $(".secret").classList.remove("active");
     }
   }
 
-  fabars.addEventListener("click", openNavbar);
+  $(".fa-bars").addEventListener("click", openNavbar);
 
   function openNavbar() {
-    if (!navbar.classList.add("active")) {
-      navbar.classList.add("active");
+    if (!$(".secret").classList.add("active")) {
+      $(".secret").classList.add("active");
     }
   }
 
-  links.forEach((link) => {
+  $$(".secret__link").forEach((link) => {
     link.addEventListener("click", closeNavbar);
   });
 
-  secretForms.forEach((item) => {
+  $$(".secret_forms").forEach((item) => {
     item.addEventListener("click", closeNavbar);
   });
 });
